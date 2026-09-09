@@ -1,85 +1,175 @@
 <html>
-    <head> 
-        <title>
-            BOOK CLUB
-        </title>
-    </head>
-    <body>
 
-        <h1>
-            mount caramel book club
-        </h1>
-     <ul>
-        <li><a href="">home</a></li>
-        <li><a href ="">online resources</a> </li>
-        <li><a href ="">reading groups</a></li>
-        <li><a href="">contact us</a></li>
+<head>
+    <meta charset="utf-8">
+    <title>Mount Caramel Book Club</title>
+    <link rel='stylesheet' href='style.css' type="text/css">
+    <style>
+        body{
+            background-color:rgb(79, 156, 98);
 
-     </ul>
+        }
+        header{
+            background-color:rgb(241, 4, 75)
+        }
+        nav{
+            background-color:rgb(239, 157, 4)
+        }
+        #intro{
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          font-size: 25px;
+        font-weight: bold;
+        text-decoration: underline;
+        background-color:aqua;
+        }
+        header h1 {
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 12px;
+            font-weight:bold;
+            color:white;
+        }
+        h3{
+            font-size:20px;
+            font-family:cursive;
+            text-decoration: underline;
+            color:blanchedalmond;
+            background-color:blueviolet;
+            font-weight:bold;
+        }
 
+        }
+        table,
+            th,
+            td{
+                border: 1px solid black;
+            }
+    </style>
+</head>
 
-       <h2>welcome to the mount caramel book club</h2>
-       <p>mount caramel book club is a online community for book readers in mount caramel school
+<body>
+    <div class="grid-container">
+        <!--Heading-->
+        <header>
+            <h1>
+                Mount Caramel Book Club
+            </h1>
+            <img src="images (17).jpg" alt="Row of books" width="300">
+        </header>
+        <!--navbar-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://idriesshahfoundation.org/books-childrens-books/" target="_blank">Online
+                        Resources</a></li>
+                <li><a href="#">Reading Groups</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <!--Intro-->
+        <div id="intro">
+            <h2>Welcome to Mount Caramel Book Club</h2>
+            <p>The Mount Caramel Book Club is an online community of book readers in Mount Caramel school.</p>
+        </div>
+        <!--Main Section-->
+        <div id="main-section">
+            <!--content-1-->
+            <div class="main-section-content">
+                <h2>Meet our teachers</h2>
+                <div id="teachers">
+                    <div class="teacher-info">
+                        <div>
+                            <img src="./public/teacher1.jpg" alt="teacher image" width="100">
+                        </div>
+                        <div>
+                            <h3>Ms. Emma</h3>
+                            <p>She teaches elementary school kids. She has a bachelor's degree in Elementary
+                                education
+                            </p>
+                        </div>
+                    </div>
+                    <div class="teacher-info">
+                        <div>
+                            <img src="./public/teacher2.jpg" alt="teacher image" width="100">
+                        </div>
+                        <div>
+                            <h3>Ms. Caroline</h3>
+                            <p>She teacher secondary school and high school kids. She has a <i>Master's of Arts</i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--content-2-->
+            <div id="book-reviews" class="main-section-content">
+                <h2>Book Reviews</h2>
+                <h3>Alice in the wonderland</h3>
+                <p><strong>Amit: </strong> <q>I loved reading this book. A must read for everyone.</q></p>
+                <p><strong>Sekhar: </strong><q>I really enjoyed reading this book</q></p>
+            </div>
+            <!--content-3-->
+            <div id="videos" class="main-section-content">
+                <h2>Related Videos</h2>
+                <div>
+                    <video width="560" height="315" controls autoplay>
+                        <source src="./public/video.mp4" type="video/mp4">
+                    </video>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wcWLKRXgjsw"
+                        title="YouTube video player"></iframe>
+                </div>
+            </div>
+            <!--content-4(tables)-->
+            <div class="main-section-content">
+                <h2>Opening Timings</h2>
+                <table>
+                    <tr>
+                        <th>Monday</th>
+                        <td>11am - 3pm</td>
+                    </tr>
+                    <tr>
+                        <th>Tuesday</th>
+                        <td>11am - 3pm</td>
+                    </tr>
+                    <tr>
+                        <th>Wednesday</th>
+                        <td>11am - 3pm</td>
+                    </tr>
+                    <tr>
+                        <th>Thursday</th>
+                        <td>11am - 3pm</td>
+                    </tr>
+                    <tr>
+                        <th>Friday</th>
+                        <td>11am - 1pm</td>
+                    </tr>
+                    <tr>
+                        <th>Saturday</th>
+                        <td>11am - 1pm</td>
+                    </tr>
+                    <tr>
+                        <th>Sunday</th>
+                        <td>Closed</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--Bestseller Section-->
+        <div id="bestsellers">
+            <h2>Best Sellers</h2>
+            <ol>
+                <li><b>Charlie and The Chocolate Factory</b> by <em>Roald Dahl</em> </li>
+                <li><b>The Cat in the Hat</b> by <em>Dr Seuss</em></li>
+                <li><b>The Little Prince</b> by <em> Antoine de Saint</em></li>
+                <li><b>Where the Wild Things Are</b> by <em>Maurice Sendak</em></li>
+            </ol>
+        </div>
+        <footer>
+            <p><span>Contact Us:</span> Mrs. Caroline</p>
+            <p><span>Phone No:</span> +1124533</p>
+            <address>36th Main, Palm Street , Delhi-36035</address>
+        </footer>
+        <!--sixth  lesson-->
+        <button>Enquiry</button>
+    </div>
+</body>
 
-       </p>
-       <h2>meet our teachers</h2>
-       <h3> Ms.Eloca</h3>
-       <p>she teaches elementary school and high school kids.she has a masters of arts..</p>
-       <h3>Ms.Caroly</h3>
-       <p>she teaches secondary school and high school kids. she has a masters of arts..</p>
-       <h2>book reviwes</h2>
-       <h3>alice in the wonderland</h3>
-       <strong>amit:</strong><q>i loved reading this book. a must read for everyone.</q><strong>
-<h2> opening timings</h2>
-<table>
-    <tr>
-        <th> Monday </th>
-        <td> 11am - 6pm </td>
-       
-    
-    </tr>
-    <tr>
-        <th> Tuesday </th>
-        <td> 11am - 10pm </td>
-    
-    
-    </tr>
-    <tr>
-        <th> Wednesday </th>
-        <td> 8am - 6pm </td>
-    
-    
-    </tr>
-    <tr>
-        <th> Thursday </th>
-        <td> 3pm-10pm </td>
-    
-    
-    </tr>
-    <tr>
-        <th> Friday </th>
-        <td>3am - 3 pm </td>
-    
-    
-    </tr>
-    <tr>
-        <th> Saturday </th>
-        <td> 2pm - 12am</td>
-    
-    
-    </tr>
-    <tr>
-        <th> Sunday </th>
-        <td> Closed </td>
-    
-    
-    </tr>
-</table>
-<h2>best sellers</h2> 
-<em>the woman in the windows:</em> by<em>S.D.ROBERTSON</em><br>
-<H2>contact us <mrs clarione></H2>
-    <p>phone no +12789788664</p>
-    <address>36th , palm street , delhi-3575655</address>
-
-    </body>
 </html>
