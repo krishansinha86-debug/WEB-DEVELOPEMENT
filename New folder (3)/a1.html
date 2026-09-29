@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Cuisines Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 20px;
+        }
+
+        /* Assign Grid Areas */
+        .grid-item1 {
+            grid-area: header;
+        }
+
+        .grid-item2 {
+            grid-area: menu;
+        }
+
+        .grid-item3 {
+            grid-area: main;
+        }
+
+        .grid-item4 {
+            grid-area: footer;
+        }
+
+        /* Container Grid Properties */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 220px auto auto auto auto;
+            grid-template-areas:
+                'header header header header header'
+                'menu main main main main'
+                'menu footer footer footer footer';
+            background-color: MediumSeaGreen;
+            padding: 10px;
+            gap: 10px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Default Grid Item Styling */
+        .grid-container>div {
+            background-color: #ffffff;
+            border: 3px solid MediumSeaGreen;
+            border-radius: 6px;
+            padding: 15px;
+        }
+
+        /* --- HEADER AREA STYLES --- */
+        .grid-item1 {
+            text-align: center;
+            padding: 15px !important;
+        }
+
+        .grid-item1 h1 {
+            font-style: italic;
+            color: #5b638c;
+            margin-bottom: 12px;
+        }
+
+        .hero-banner {
+            position: relative;
+            width: 100%;
+            max-height: 250px;
+            overflow: hidden;
+            border-radius: 6px;
+        }
+
+        .hero-banner img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(77, 137, 131, 0.88);
+            color: #ffffff;
+            padding: 15px;
+            width: 70%;
+            font-size: 0.82rem;
+            line-height: 1.4;
+            border-radius: 4px;
+        }
+
+        /* --- MENU AREA STYLES --- */
+        .grid-item2 {
+            background-color: #ffeed3 !important;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .grid-item2 h3 {
+            font-size: 1rem;
+            color: #333;
+            text-transform: uppercase;
+            border-bottom: 2px solid #e0c8a0;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+        }
+
+        .grid-item2 a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 0.85rem;
+            padding: 10px 12px;
+            background-color: #ffffff;
+            border-radius: 4px;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .grid-item2 a:hover {
+            background-color: #F68E77;
+            color: #ffffff;
+        }
+
+        /* --- MAIN CONTENT AREA STYLES --- */
+        .grid-item3 {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .section-banner {
+            background-color: #fff899;
+            color: #b80000;
+            text-align: center;
+            padding: 6px;
+            font-weight: bold;
+            font-size: 1rem;
+            border-radius: 4px;
+        }
+
+        .food-card {
+            display: flex;
+            align-items: center;
+            background-color: #fcf4fb;
+            border-radius: 8px;
+            padding: 12px;
+            gap: 15px;
+        }
+
+        .food-card img {
+            width: 140px;
+            height: 95px;
+            object-fit: cover;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+
+        .food-card p {
+            color: #444;
+            font-size: 0.82rem;
+            line-height: 1.4;
+        }
+
+        /* --- FOOTER AREA STYLES --- */
+        .grid-item4 {
+            background-color: #242938 !important;
+            color: #ff5a5a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px !important;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CSS Grid Container -->
+    <div class="grid-container">
+
+        <!-- Header Area -->
+        <div class="grid-item1">
+            <h1>Indian Cuisines</h1>
+            <div class="hero-banner">
+                <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=1000&q=80"
+                    alt="Indian Spices">
+                <div class="hero-overlay">
+                    The traditional food of India has been widely appreciated for its fabulous use of herbs and spices.
+                    Indian cuisine is known for its large assortment of dishes. The cooking style varies from region to
+                    region and is largely divided into South Indian & North Indian cuisine.
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Area (Sidebar) -->
+        <div class="grid-item2">
+            <h3>Categories</h3>
+            <a href="#bengali">BENGALI</a>
+            <a href="#gujarati">GUJARATI</a>
+            <a href="#mughlai">MUGHLAI</a>
+            <a href="#punjabi">PUNJABI</a>
+            <a href="#south-indian">SOUTH INDIAN</a>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="grid-item3">
+
+            <!-- Bengali Food -->
+            <section id="bengali">
+                <div class="section-banner">Bengali Food</div>
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=400&q=80"
+                        alt="Bengali Food">
+                    <p>Bengali cuisine is appreciated for its fabulous use of panchphoron, a term used to refer to five
+                        essential spices. The specialty of Bengali food lies in the perfect blend of sweet and spicy
+                        flavors.</p>
+                </div>
+            </section>
+
+            <!-- Gujarati Food -->
+            <section id="gujarati">
+                <div class="section-banner">Gujarati Food</div>
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=400&q=80"
+                        alt="Gujarati Food">
+                    <p>Traditional Gujarati food is primarily vegetarian and has high nutritional value. The typical
+                        Gujarati thali consists of varied lip-smacking dishes cooked in unique styles.</p>
+                </div>
+            </section>
+
+            <!-- Mughlai Food -->
+            <section id="mughlai">
+                <div class="section-banner">Mughlai Food</div>
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=400&q=80"
+                        alt="Mughlai Food">
+                    <p>Mughlai cuisine is one of the most popular cuisines, whose origin traces back to the Mughal
+                        Empire. It consists of rich dishes prepared in royal kitchens.</p>
+                </div>
+            </section>
+
+            <!-- Punjabi Food -->
+            <section id="punjabi">
+                <div class="section-banner">Punjabi Food</div>
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=400&q=80"
+                        alt="Punjabi Food">
+                    <p>The cuisine of Punjab has an enormous variety of mouth-watering vegetarian and non-vegetarian
+                        dishes with spice levels ranging from mild to high.</p>
+                </div>
+            </section>
+
+            <!-- South Indian Cuisine -->
+            <section id="south-indian">
+                <div class="section-banner">South Indian Cuisine</div>
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=400&q=80"
+                        alt="South Indian Food">
+                    <p>South Indian cuisine is known for light, rice-based appetizing dishes like yummy dosas, vadas,
+                        idlis, and uttapams mixed with lentils.</p>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Footer Area -->
+        <div class="grid-item4">
+            <span>Published By: ROANG TERES/span>
+            <span>Date: 25/04/1972</span>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
